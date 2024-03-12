@@ -1,0 +1,288 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flowering</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+    crossorigin="anonymous"></script>
+   <script src="https://kit.fontawesome.com/99aa11eb92.js" crossorigin="anonymous"></script>
+  <script src="script.js"></script>
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+  <style>
+    /* Style for the anchor link */
+    #scrollToTop {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: #007bff;
+        color: #fff;
+        padding: 10px 20px;
+        border-radius: 5px;
+        text-decoration: none;
+        display: none; /* Initially hidden */
+    }
+</style>
+</head>
+<body>
+    <div>
+        <div class="container-head"><br>
+          <img src="{% static 'images/logo.png' %}" alt="" class="logo1">
+          <h4 class="h1">ORGR<i>ee</i>NIC &nbsp;Cart </h4>
+    
+        <nav class="navbar navbar-expand-lg" style="background-color: rgb(6, 99, 29);" id="nav1">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="#"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+              aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="{% url 'home' %}" id="a1">Home</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="" role="button" data-bs-toggle="dropdown"
+                    aria-expanded="false" id="a2">
+                    <div class="vr"></div> Fruits
+                  </a>
+                  <ul class="dropdown-menu">
+                    <center>
+    
+                      <li><a class="h6" href="{% url 'sfruits' %}">Seasonal fruits</a></li>
+                      <hr>
+                      <li><a class="h6" href="{% url 'ifruits' %}">Imported fruits</a></li>
+                      <hr>
+                      <li><a class="h6" href="{% url 'tfruits' %}">Tropical fruits</a></li>
+                      <hr>
+                      <li><a class="h6" href="{% url 'dfruits' %}">Dry fruits</a></li>
+                      <hr>
+                      <li><a class="h6" href="{% url 'cfruits' %}">Citrus fruits</a></li>
+                      <hr>
+                      <li><a class="h6" href="{% url 'berries' %}">Berries</a></li>
+                      <hr>
+                      <li><a class="h6" href="{% url 'melons' %}">Melons</a></li>
+    
+                  </ul>
+                  </center>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                      aria-expanded="false" id="a3">
+                      <div class="vr"></div> Vegetables
+                    </a>
+                    <ul class="dropdown-menu">
+                      <center>
+                        <li><a class="h6" href="{% url 'leafy' %}">Leafy Vegetables</a></li>
+                        <hr>
+                        <li><a class="h6" href="{% url 'root' %}">Root Vegetables</a></li>
+                        <hr>
+                        <li><a class="h6" href="{% url 'pod' %}">Pod Vegetables</a></li>
+                    </ul>
+                    </center>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                      aria-expanded="false" id="a4">
+                      <div class="vr"></div> Plants & Seeds
+                    </a>
+                    <ul class="dropdown-menu">
+                      <center>
+                        <li><a class="h6" href="{% url 'indoor' %}">Indoor Plants</a></li>
+                        <hr>
+                        <li><a class="h6" href="{% url 'cactus' %}">Cactus & Succulents</a></li>
+                        <hr>
+                        <li><a class="h6" href="{% url 'medicinal' %}">Medicinal Plants</a></li>
+                        <hr>
+                        <li><a class="h6" href="{% url 'fruitplants' %}">Fruit Plants</a></li>
+                        <hr>
+                        <li><a class="h6" href="{% url 'ornamental' %}">Ornamental Plants</a></li>
+                        <hr>
+                        <li><a class="h6" href="#">Flowering Plants</a></li>
+                    </ul>
+                    </center>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                      aria-expanded="false" id="a4">
+                      <div class="vr"></div>  Fertilisers
+                    </a>
+                    <ul class="dropdown-menu">
+                      <center>
+                        <li><a class="h6" href="{% url 'fertiliser' %}">Organic Fertilisers</a></li>
+                        <hr>
+                        <li><a class="h6" href="{% url 'cocopeat' %}">Coco peat</a></li>
+                    </ul>
+                    </center>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#about1" id="a5">
+                      <div class="vr"></div>About Us
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#er1" id="a5"> <div class="vr"></div>Product Gallery</a>
+                  </li>
+                
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+    
+    
+            
+    
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+    
+ <center><h4 id="s1"><u>Flowering Plants</u></h4></center>  
+  
+ <div class="card" style="width: 18rem;" id="is1">
+  <img src="{% static 'images/daffodil.jpeg'%}" class="card-img-top" alt="..." id="si1">
+  <div class="card-body">
+    <center><h5 class="card-title">Daffodil plant</h5>
+    <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
+    <a href="#" class="btn btn-primary">View Product</a></center>
+  </div>
+</div>
+   
+
+<div class="card" style="width: 18rem;"id="is2">
+  <img src="{%static 'images/chrysantheum.jpeg' %}" class="card-img-top" alt="..." id="si1" >
+  <div class="card-body" >
+    <center><h5 class="card-title">Chrysanthemum</h5>
+    <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
+    <a href="#" class="btn btn-primary">View Product</a></center>
+  </div>
+</div>
+
+<div class="card" style="width: 18rem;"id="is3">
+  <img src="{%static 'images/daisy.jpeg' %}" class="card-img-top" alt="..." id="si1" >
+  <div class="card-body" >
+    <center><h5 class="card-title">Transvaal daisy</h5>
+    <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
+    <a href="#" class="btn btn-primary">View Product</a></center>
+  </div>
+</div>
+
+<div class="card" style="width: 18rem;"id="is4">
+  <img src="{%static 'images/dahlia.jpeg' %}" class="card-img-top" alt="..." id="si1" >
+  <div class="card-body" >
+    <center><h5 class="card-title"> Dahlia</h5>
+    <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
+    <a href="#" class="btn btn-primary">View Product</a></center>
+  </div>
+</div>
+
+<div class="card" style="width: 18rem;"id="is5">
+  <img src="{%static 'images/orchid.jpeg' %}" class="card-img-top" alt="..." id="si1" >
+  <div class="card-body" >
+    <center><h5 class="card-title">Orchids</h5>
+    <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
+    <a href="#" class="btn btn-primary">View Product</a></center>
+  </div>
+</div>
+
+<div class="card" style="width: 18rem;"id="is6">
+  <img src="{%static 'images/allium.jpeg' %}" class="card-img-top" alt="..." id="si1" >
+  <div class="card-body" >
+    <center><h5 class="card-title">Allium</h5>
+    <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
+    <a href="#" class="btn btn-primary">View Product</a></center>
+  </div>
+</div>
+  
+ <div class="card" style="width: 18rem;" id="is7">
+  <img src="{% static 'images/aster.jpg'%}" class="card-img-top" alt="..." id="si1">
+  <div class="card-body">
+    <center><h5 class="card-title">Aster</h5>
+    <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
+    <a href="#" class="btn btn-primary">View Product</a></center>
+  </div>
+</div>
+   
+
+<div class="card" style="width: 18rem;"id="is8">
+  <img src="{%static 'images/whitedaisy.jpeg' %}" class="card-img-top" alt="..." id="si1" >
+  <div class="card-body" >
+    <center><h5 class="card-title">Shasta daisy</h5>
+    <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
+    <a href="#" class="btn btn-primary">View Product</a></center>
+  </div>
+</div>
+
+<div class="card" style="width: 18rem;"id="is9">
+  <img src="{%static 'images/cornflower.jpeg' %}" class="card-img-top" alt="..." id="si1" >
+  <div class="card-body" >
+    <center><h5 class="card-title">Cornflower</h5>
+    <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
+    <a href="#" class="btn btn-primary">View Product</a></center>
+  </div>
+</div>
+
+<div class="card" style="width: 18rem;"id="is10">
+  <img src="{%static 'images/blackeyed.jpeg' %}" class="card-img-top" alt="..." id="si1" >
+  <div class="card-body" >
+    <center><h5 class="card-title">Black-Eyed Susan</h5>
+    <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
+    <a href="#" class="btn btn-primary">View Product</a></center>
+  </div>
+</div>
+
+<div class="card" style="width: 18rem;"id="is11">
+  <img src="{%static 'images/blanket.jpeg' %}" class="card-img-top" alt="..." id="si1" >
+  <div class="card-body" >
+    <center><h5 class="card-title">Blanket Flower</h5>
+    <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
+    <a href="#" class="btn btn-primary">View Product</a></center>
+  </div>
+</div>
+
+<div class="card" style="width: 18rem;"id="is12">
+  <img src="{%static 'images/calendula.jpeg' %}" class="card-img-top" alt="..." id="si1" >
+  <div class="card-body" >
+    <center><h5 class="card-title">Calendula officinalis</h5>
+    <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
+    <a href="#" class="btn btn-primary">View Product</a></center>
+  </div>
+</div>
+
+ <!-- Anchor link to scroll to the top -->
+ <a href="#" id="scrollToTop">Scroll to Top</a>
+
+ <!-- Your JavaScript code -->
+ <script>
+     // Function to scroll to the top of the page
+     function scrollToTop() {
+         window.scrollTo({ top: 0, behavior: 'smooth' }); // Scrolls to the top of the page with smooth animation
+     }
+
+     // Show the scroll-to-top button when user scrolls down
+     window.addEventListener('scroll', function() {
+         var scrollToTopButton = document.getElementById('scrollToTop');
+         if (window.scrollY > 100) {
+             scrollToTopButton.style.display = 'block';
+         } else {
+             scrollToTopButton.style.display = 'none';
+         }
+     });
+
+     // Event listener to trigger scrolling to top when the link is clicked
+     document.getElementById("scrollToTop").addEventListener("click", scrollToTop);
+ </script>
+ 
+
+
+</body>
+</html>

@@ -1,0 +1,306 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OrGreenic Cart</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+    crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/99aa11eb92.js" crossorigin="anonymous"></script>
+  <script src="script.js"></script>
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+  <style>
+    /* Style for the anchor link */
+    #scrollToTop {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: #007bff;
+        color: #fff;
+        padding: 10px 20px;
+        border-radius: 5px;
+        text-decoration: none;
+        display: none; /* Initially hidden */
+    }
+</style>
+
+</head>
+
+<body>
+  <div>
+    <div class="container-head"><br>
+      <img src="{% static 'images/logo.png' %}" alt="" class="logo1">
+      <h4 class="h1">ORGR<i>ee</i>NIC &nbsp;Cart </h4>
+
+      <nav class="navbar navbar-expand-lg" style="background-color: rgb(6, 99, 29);" id="nav1">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#"></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="{% url 'home' %}" id="a1">Home</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="" role="button" data-bs-toggle="dropdown"
+                  aria-expanded="false" id="a2">
+                  <div class="vr"></div> Fruits
+                </a>
+                <ul class="dropdown-menu">
+                  <center>
+
+                    <li><a class="h6" href="{% url 'sfruits' %}">Seasonal fruits</a></li>
+                    <hr>
+                    <li><a class="h6" href="{% url 'ifruits' %}">Imported fruits</a></li>
+                    <hr>
+                    <li><a class="h6" href="{% url 'tfruits' %}">Tropical fruits</a></li>
+                    <hr>
+                    <li><a class="h6" href="{% url 'dfruits' %}">Dry fruits</a></li>
+                    <hr>
+                    <li><a class="h6" href="{% url 'cfruits' %}">Citrus fruits</a></li>
+                    <hr>
+                    <li><a class="h6" href="{% url 'berries' %}">Berries</a></li>
+                    <hr>
+                    <li><a class="h6" href="{% url 'melons' %}">Melons</a></li>
+
+                </ul>
+                </center>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                  aria-expanded="false" id="a3">
+                  <div class="vr"></div> Vegetables
+                </a>
+                <ul class="dropdown-menu">
+                  <center>
+                    <li><a class="h6" href="{% url 'leafy' %}">Leafy Vegetables</a></li>
+                    <hr>
+                    <li><a class="h6" href="{% url 'root' %}">Root Vegetables</a></li>
+                    <hr>
+                    <li><a class="h6" href="{% url 'pod' %}">Pod Vegetables</a></li>
+
+                </ul>
+                </center>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                  aria-expanded="false" id="a4">
+                  <div class="vr"></div> Plants & Seeds
+                </a>
+                <ul class="dropdown-menu">
+                  <center>
+                    <li><a class="h6" href="{% url 'indoor' %}">Indoor Plants</a></li>
+                    <hr>
+                    <li><a class="h6" href="{% url 'cactus' %}">Cactus & Succulents</a></li>
+                    <hr>
+                    <li><a class="h6" href="{% url 'medicinal' %}">Medicinal Plants</a></li>
+                    <hr>
+                    <li><a class="h6" href="{% url 'fruitplants' %}">Fruit Plants</a></li>
+                    <hr>
+                    <li><a class="h6" href="{% url 'ornamental' %}">Ornamental Plants</a></li>
+                    <hr>
+                    <li><a class="h6" href="{% url 'flower' %}">Flowering Plants</a></li>
+                </ul>
+                </center>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                  aria-expanded="false" id="a4">
+                  <div class="vr"></div> Fertilisers
+                </a>
+                <ul class="dropdown-menu">
+                  <center>
+                    <li><a class="h6" href="{% url 'fertiliser' %}">Organic Fertilisers</a></li>
+                    <hr>
+                    <li><a class="h6" href="{% url 'cocopeat'%}">Coco peat</a></li>
+                </ul>
+                </center>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#about1" id="a5">
+                  <div class="vr"></div>About Us
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#product" id="a5">
+                  <div class="vr"></div>Product Gallery
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#contact" id="a6">
+                  <div class="vr"></div>Contact us
+                </a>
+              </li>
+
+              <form class="d-flex" role="search">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+              </form>
+
+
+              <!-- Button trigger modal -->
+              <button type="button" class="btn " data-bs-toggle="modal" data-bs-target="#exampleModal">
+                <div class="vr"></div> <i class="fa-solid fa-user" id="user"></i>
+              </button>
+
+
+              <!-- Modal -->
+              <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h1 class="modal-title fs-5" id="mhead">Good to see you again !</h1>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      <div class="input-box">
+                        <input type="text" placeholder="Username" required class="t1"><i class="fa-solid fa-user"
+                          id="u1"></i>
+                      </div>
+                      <div class="input-box">
+                        <input type="password" placeholder="Password" required class="t1"><i class="fa-solid fa-lock"
+                          id="u1"></i><br>
+                        <button type="button" class="b1" data-bs-dismiss="modal">Login</button>
+                      </div>
+                    </div>
+                    <div class="modal-footer">
+
+                      <center>
+                        <p id="p1"><b>Not having an account?<i><a href="{% url 'signup' %}">
+                                signup
+                              </a></b></i></p>
+                      </center>
+
+
+                      <!-- <button type="button" class="b1"data-bs-dismiss="modal">Login</button>
+                                            <button type="button" class="b1 ">Login</button> -->
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+    <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="{%static 'images\organic food.jpg'%}" id="d1" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="{%static 'images/organic fruits.jpg'%}" id="d1" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="{%static 'images/sapling.jpg'%}" id="d1" alt="...">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
+        data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
+        data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+
+
+    <div id="about1">
+      <center>
+        <h2 id="s2"><u>About Us</u></h2>
+      </center>
+      <p id="s3">Welcome to our website! We are passionate about providing you with the highest quality organic
+        products while promoting sustainability and environmental responsibility. Our mission is to make healthy and
+        sustainable living accessible to everyone by offering a wide range of organic products that are good for you and
+        the planet. Our values are....</p>
+
+      <ul id="s3">
+        <li>Commitment to organic farming practices</li>
+        <li>Promotion of environmental sustainability</li>
+        <li>Support for local farmers and communities</li>
+        <li>Transparency and honesty in all our dealings</li>
+        <li>Continuous improvement and innovation</li>
+      </ul>
+
+      <p id="s3">Our journey began with a vision to create a healthier world by offering organic alternatives to
+        conventional products. Over the years, we have grown and expanded our offerings, but our commitment to quality
+        and sustainability remains unwavering.We are a team of dedicated individuals who are passionate about organic
+        living and are committed to providing you with the best possible experience.</p>
+
+    </div>
+    
+    <center>
+      <h2 id="s2"><u>Product Gallery</u></h2>
+    </center>
+    <div class="container text-center" id="product">
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4">
+        <div class="col"><img src="{% static 'images/aeonium.jpeg'%}" alt=""></div>
+        <div class="col"><img src="{% static 'images/ambrosia.jpeg'%}" alt=""></div>
+        <div class="col"><img src="{% static 'images/almonds.jpeg'%}" alt=""></div>
+        <div class="col"><img src="{% static 'images/aloe.jpeg'%}" alt=""></div>
+        <div class="col"><img src="{% static 'images/ananasmelon.jpeg'%}" alt=""></div>
+        <div class="col"><img src="{% static 'images/apple.jpeg'%}" alt=""></div>
+        <div class="col"><img src="{% static 'images/apricot.jpeg'%}" alt=""></div>
+        <div class="col"><img src="{% static 'images/arugula.jpeg'%}" alt=""></div>
+        <div class="col"><img src="{% static 'images/asianpear.jpeg'%}" alt=""></div>
+        <div class="col"><img src="{% static 'images/avocado.jpeg'%}" alt=""></div>
+        <div class="col"><img src="{% static 'images/azuki.jpeg'%}" alt=""></div>
+        <div class="col"><img src="{% static 'images/banana.jpeg'%}" alt=""></div>
+        <div class="col"><img src="{% static 'images/bearberry.jpeg'%}" alt=""></div>
+        <div class="col"><img src="{% static 'images/beet.jpeg'%}" alt=""></div>
+        <div class="col"><img src="{% static 'images/blackberry.jpeg'%}" alt=""></div>
+        <div class="col"><img src="{% static 'images/blackcurrant.jpeg'%}" alt=""></div>
+      </div>
+    </div>
+
+    
+    <center><h2 id="s2"><u>Contact Us</u></h2></center>
+    <div>
+      <i class="fa-solid fa-location-dot" id="loc"></i>
+      <h4 id="ln1">Location:</h4>
+      <h5 id="ln2">2nd street MG Road <br> Palarivattom Kochi kerala India</h5>
+    </div>
+     <!-- Anchor link to scroll to the top -->
+     <a href="#" id="scrollToTop">Scroll to Top</a>
+
+     <!-- Your JavaScript code -->
+     <script>
+         // Function to scroll to the top of the page
+         function scrollToTop() {
+             window.scrollTo({ top: 0, behavior: 'smooth' }); // Scrolls to the top of the page with smooth animation
+         }
+ 
+         // Show the scroll-to-top button when user scrolls down
+         window.addEventListener('scroll', function() {
+             var scrollToTopButton = document.getElementById('scrollToTop');
+             if (window.scrollY > 100) {
+                 scrollToTopButton.style.display = 'block';
+             } else {
+                 scrollToTopButton.style.display = 'none';
+             }
+         });
+ 
+         // Event listener to trigger scrolling to top when the link is clicked
+         document.getElementById("scrollToTop").addEventListener("click", scrollToTop);
+     </script>
+     
+    <footer id="f1">
+   
+      <center><p> OrGreenic Cart  &copy; 2024  All rights reserved.</p></center>
+  </footer>
+</body>
+
+</html>
